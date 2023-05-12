@@ -9,7 +9,6 @@ import { User } from 'src/users/user.entity';
         host: 'localhost',
         port: 5432,
         username: 'postgres',
-        password: 'Rishikesh@0209',
         // database: configService.get('DB_NAME'),
         database: 'nest-crud-db',
         // entities: [
