@@ -9,7 +9,7 @@ POST  http://localhost:3000/messages?validate=true&hello=rishi
 Content-Type: application/json
 
 {
-    "content":null
+    "content":"null"
 }
 
 
