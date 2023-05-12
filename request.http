@@ -15,3 +15,14 @@ Content-Type: application/json
 
 ### get message with a id
 GET http://localhost:3000/messages/1212122
+
+
+
+### signup check
+POST  http://localhost:3000/users/signup?validate=true&hello=rishi
+Content-Type: application/json
+
+{
+    "email":"abc@123as.com",
+    "password":"pasdasdasd"
+}
