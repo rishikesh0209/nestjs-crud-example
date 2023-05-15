@@ -10,7 +10,8 @@ import { Reports } from './reports/reports.entity';
 import { DatabaseModule } from './database/database.module';
 @Module({
   imports: [
-    // ConfigModule.forRoot({ isGlobal: true }),
+    ConfigModule.forRoot({ isGlobal: true,
+    envFilePath:`${process.env.NODE_ENV}.env` }),
     DatabaseModule,
     MessagesModule,
     UsersModule,
