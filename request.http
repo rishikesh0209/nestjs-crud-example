@@ -48,3 +48,19 @@ Content-Type: application/json
   
     "email":"pasdasdasd12@test.com"
 }
+
+
+### report 
+POST http://localhost:3000/reports
+content-type: application/json
+
+{
+  "price":2000,
+  "make":"sdasd12",
+  "model":"genx",
+  "year":2023,
+  "lat":17,
+  "lng":18,
+  "mileage":30,
+  "userId":1
+}

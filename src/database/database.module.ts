@@ -1,8 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Reports } from 'src/reports/reports.entity';
-import { User } from 'src/users/user.entity';
 
 @Module({
   imports: [
@@ -17,11 +15,13 @@ import { User } from 'src/users/user.entity';
           password: config.get('DB_PASSWORD'),
           // database: configService.get('DB_NAME'),
           database: config.get('DB_NAME'),
-          entities: [
-            "src/entity/**/*.ts"
-          ],
+          // entities: [
+          //   "src/entity/**/*.ts"
+          // ],
+          entities:["dist/**/*.entity.js"],
           // entities: [User, Reports],
-          synchronize: config.get('DB_SYNC'), // turn off for production
+          synchronize: true, // turn off for production
+          logging:true
         };
       },
     }),

@@ -12,7 +12,7 @@ export class UsersService {
     return this.repo.save(user); // saves the data or updates the data
   };
 
-  findOne = (id: number) => {
+  findOne = (id: number): Promise<User | undefined>  => {
     return this.repo.findOneBy({ id: id });
   };
   find = (email: string) => {
